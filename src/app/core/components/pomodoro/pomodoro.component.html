@@ -1,1 +1,20 @@
-<p>pomodoro works!</p>
+<main>
+  <header>
+    <h1> {{ headerLabel }} #{{ qntPomodoros }}</h1>
+  </header>
+  <section>
+    <div class="pomodoro-timer">
+      <div class="pomodoro-timer__time">
+        <span> {{ minutes }} </span>
+        <span> : </span>
+        <span> {{ seconds }} </span>
+      </div>
+      <div class="pomodoro-timer__buttons">
+        <button (click)="startAndPause()"> {{ buttonLabel }} </button>
+        <!-- <ng-container *ngIf="isPaused">
+          <button (click)="resetTimer()"> reset </button>
+        </ng-container> -->
+      </div>
+    </div>
+  </section>
+</main>

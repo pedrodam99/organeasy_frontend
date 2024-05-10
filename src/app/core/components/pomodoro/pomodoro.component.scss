@@ -1,0 +1,39 @@
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 0;
+  align-items: center;
+}
+
+
+main {
+  width: calc(100vw - 240px);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  section {
+    div.pomodoro-timer {
+      // background-color: red;
+
+      div.pomodoro-timer__time {
+        border: 10px solid #0063C9;
+        border-radius: 20px;
+        width: 230px;
+        height: 120px;
+
+        color: white;
+        font-size: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+  }
+}
