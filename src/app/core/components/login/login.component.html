@@ -1,0 +1,43 @@
+<main>
+  <header>
+    Organ<span>easy</span>
+  </header>
+  <section>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Coloque um email valido
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email é <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('email') && !passwordFormControl.hasError('required')">
+          Please Enter
+        </mat-error>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Senha é <strong>obrigatória</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <span class="novo_cadastro">
+      Novo por aqui? Cadastre-se
+    </span>
+    <span *ngIf="this.alert !== ''" class="disclaimer">
+      {{ this.alert }}
+    </span>
+    <div class="buttons">
+      <app-button
+        [buttonColor]="'blue'"
+        [buttonLabel]="'Entrar'"
+        [buttonDisabled]="!emailFormControl.valid || !passwordFormControl.valid"
+        (click)="login()">
+      </app-button>
+    </div>
+  </section>
+</main>

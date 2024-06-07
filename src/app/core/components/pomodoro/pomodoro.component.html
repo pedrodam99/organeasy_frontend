@@ -9,11 +9,12 @@
         <span> : </span>
         <span> {{ seconds }} </span>
       </div>
-      <div class="pomodoro-timer__buttons">
-        <button (click)="startAndPause()"> {{ buttonLabel }} </button>
-        <!-- <ng-container *ngIf="isPaused">
-          <button (click)="resetTimer()"> reset </button>
-        </ng-container> -->
+      <div class="pomodoro-timer__button">
+        <app-button
+          [buttonLabel]="buttonLabel"
+          [buttonColor]="'blue'"
+          (click)="startAndPause()">
+        </app-button>
       </div>
     </div>
   </section>

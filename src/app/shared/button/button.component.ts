@@ -15,6 +15,7 @@ export class ButtonComponent implements OnInit {
   @Input() buttonLabel: string = '';
   @Input() buttonColor: string = 'blue'
   @Input() buttonIcon: string = '';
+  @Input() buttonDisabled: boolean = false;
 
   @Output() onClickEmitter: EventEmitter<void> = new EventEmitter<void>();
 

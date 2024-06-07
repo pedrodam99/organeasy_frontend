@@ -1,0 +1,56 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  header {
+    font-size: 8rem;
+    margin-bottom: 120px;
+    color: #FFF;
+    font-weight: lighter;
+
+    span {
+      color: #0063c9;
+      font-weight: 500;
+    }
+  }
+
+  section {
+    width: 300px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #3f3f3f;
+
+    form {
+      mat-form-field {
+        width: 100%;
+      }
+    }
+
+    .buttons {
+      margin-top: 20px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.novo_cadastro {
+  color: #0063c9;
+  text-align: center;
+}
+
+.novo_cadastro:hover {
+  color: #0063f9;
+  font-weight: 600;
+}
+
+.disclaimer {
+  text-align: center;
+  color: red;
+  font-weight: 500;
+}

@@ -22,7 +22,7 @@ main {
       // background-color: red;
 
       div.pomodoro-timer__time {
-        border: 10px solid #0063C9;
+        border: 3px solid #0063C9;
         border-radius: 20px;
         width: 230px;
         height: 120px;
@@ -32,6 +32,12 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      div.pomodoro-timer__button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
       }
 
     }

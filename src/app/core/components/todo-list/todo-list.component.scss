@@ -1,67 +1,114 @@
 main {
+  display: flex;
   width: 100vw;
-  width: calc(100vw - 240px);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  column-gap: 20px;
-  margin: 0 20px;
-  margin-top: 20px;
+  height: calc(98.8vh + 10px);
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #4f4f4f;
 
-  section.painel {
-    width: 100%;
-    height: 80vh;
+  nav {
+
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    header {
-      background-color: #0063C9;
-      text-align: center;
-      height: 64px;
-      border-radius: 0 0 32px 32px;
+    div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      width: 200px;
+      padding-top: 24px;
 
-      h1 {
-        color: #fff;
-        font-weight: 700;
-        margin-bottom: 0;
-      }
-
-      h2 {
-        color: #f4f4f4;
-        font-size: 0.75rem;
-        margin-top: 0;
+      a {
+        width: 100%;
+        text-decoration: none;
+        padding-left: 16px;
+        color: #4f4f4f;
+        font-size: 18px;
       }
     }
 
-    div.task-list {
-      ul {
-        padding: 0;
+    h4 {
+      color: #4f4f4f;
+      text-align: center;
+    }
 
-        li.task {
-          display: flex;
-          height: 50px;
-          background-color: #fff;
-          margin-bottom: 4px;
-          list-style-type: none;
-          padding: 4px 20px 20px 0;
-          margin: 4px;
+    h4:hover,
+    a:hover {
+      background-color: rgba(0, 99, 201, 0.4);
+      color: rgba(0, 99, 201, 1) !important;
+      // font-weight: bold;
+      cursor: pointer;
+    }
+  }
 
-          .task-info {
+  main.todo {
+    width: 100vw;
+    width: calc(100vw - 240px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 20px;
+    margin: 0 20px;
+    margin-top: 20px;
+
+    section.painel {
+      width: 100%;
+      height: 80vh;
+      background-color: #f4f4f4;
+
+      header {
+        background-color: #0063C9;
+        text-align: center;
+        height: 64px;
+        border-radius: 0 0 32px 32px;
+
+        h1 {
+          color: #fff;
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+
+        h2 {
+          color: #f4f4f4;
+          font-size: 0.75rem;
+          margin-top: 0;
+        }
+      }
+
+      div.task-list {
+        ul {
+          padding: 0;
+
+          li.task {
             display: flex;
-            flex-direction: column;
+            height: 50px;
+            background-color: #fff;
+            margin-bottom: 4px;
+            list-style-type: none;
+            padding: 4px 20px 20px 0;
+            margin: 4px;
 
-            .title {
-              color: #0063C9;
-              font-weight: bold;
-              font-size: 1.2rem
+            .task-info {
+              display: flex;
+              flex-direction: column;
+
+              .title {
+                color: #0063C9;
+                font-weight: bold;
+                font-size: 1.2rem
+              }
             }
           }
         }
       }
     }
   }
-}
 
-principal-color {
-  background-color: #0063C9;
-  color: #0063C9;
+  principal-color {
+    background-color: #0063C9;
+    color: #0063C9;
+  }
+
 }
